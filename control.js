@@ -151,7 +151,7 @@ function anitop(){
 
 // Color selector (the values from the dropdown menu are connect to a color here)
 function selectColor(phaseId){
-	switch(parseFloat(phaseId)) {
+	switch(parseInt(phaseId)) {
 		case 1:
 			colorString =  "rgb(113, 153, 255)"; // blau
 			break;
