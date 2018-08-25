@@ -24,7 +24,8 @@ function calcOurglass(form) {
 	console.log(top5)
 	console.log(bottom1)
 	console.log(bottom5)
-	console.log(line1) console.log(line5)
+	console.log(line1)
+	console.log(line5)
 
 
 
