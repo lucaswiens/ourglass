@@ -50,43 +50,33 @@ function calcOurglass(form) {
 	var time_total = duration.reduce((x, y) => x + y);
 
 	// initialize h_vec (it holds all the heights of a singular triangle
-	h_output = [];
+	h_output_top = [];
+	h_output_bottom = [];
 	var a_i = a_0;
 	for(let i = 0; i < duration.length; i++) {
 		let area_i = A_triangle * duration[i] / time_total;
 
-		h_output[i] = -1*(Math.tan(phi_triangle) * a_i) / 2 + Math.sqrt(Math.pow((Math.tan(phi_triangle) * a_i) / 2, 2) + Math.tan(phi_triangle) * area_i)
+		h_output_top[i] = -1*(Math.tan(phi_triangle) * a_i) / 2 + Math.sqrt(Math.pow((Math.tan(phi_triangle) * a_i) / 2, 2) + Math.tan(phi_triangle) * area_i)
 
-		a_i = 2 * h_output[i] / Math.tan(phi_triangle) + a_i;
+		a_i = 2 * h_output_top[i] / Math.tan(phi_triangle) + a_i;
+		
+		h_output_bottom[i] = Math.sqrt(area_i * 2 / Math.tan(phi_triangle));
 	}
+	heights_triangles_top = calcNormHeights(h_output_top)
+	heights_triangles_bottom = calcNormHeights(h_output_bottom)
 
-
-	//Copy initial array
-	var heights_triangles = h_output.concat();
-		// cumsum
-	for (var i = 1; i < heights_triangles.length; i++) {
-		heights_triangles[i] = heights_triangles[i-1] + heights_triangles[i];
-	}
-
-	// Norm heights
-	for(let i = 0; i < heights_triangles.length; i++) {
-		heights_triangles[i] = heights_triangles[i] / heights_triangles[heights_triangles.length - 1];
-	}
-
-	// output heights
-	console.log(heights_triangles)
 
 	// set heights of triangles
-	top1.style.setProperty('--top1-scale', heights_triangles[4])
-	top2.style.setProperty('--top2-scale', heights_triangles[3])
-	top3.style.setProperty('--top3-scale', heights_triangles[2])
-	top4.style.setProperty('--top4-scale', heights_triangles[1])
-	top5.style.setProperty('--top5-scale', heights_triangles[0])
-	bottom1.style.setProperty('--bottom1-scale', heights_triangles[4])
-	bottom2.style.setProperty('--bottom2-scale', heights_triangles[3])
-	bottom3.style.setProperty('--bottom3-scale', heights_triangles[2])
-	bottom4.style.setProperty('--bottom4-scale', heights_triangles[1])
-	bottom5.style.setProperty('--bottom5-scale', heights_triangles[0])
+	top1.style.setProperty('--top1-scale', heights_triangles_top[4])
+	top2.style.setProperty('--top2-scale', heights_triangles_top[3])
+	top3.style.setProperty('--top3-scale', heights_triangles_top[2])
+	top4.style.setProperty('--top4-scale', heights_triangles_top[1])
+	top5.style.setProperty('--top5-scale', heights_triangles_top[0])
+	bottom1.style.setProperty('--bottom1-scale', heights_triangles_bottom[4])
+	bottom2.style.setProperty('--bottom2-scale', heights_triangles_bottom[3])
+	bottom3.style.setProperty('--bottom3-scale', heights_triangles_bottom[2])
+	bottom4.style.setProperty('--bottom4-scale', heights_triangles_bottom[1])
+	bottom5.style.setProperty('--bottom5-scale', heights_triangles_bottom[0])
 
 
 	//Copy initial array
@@ -103,6 +93,11 @@ function calcOurglass(form) {
 	top3.style.animationDuration =  (duration_triangles[2] * timeFactor).toString() + 's';
 	top4.style.animationDuration =  (duration_triangles[1] * timeFactor).toString() + 's';
 	top5.style.animationDuration =  (duration_triangles[0] * timeFactor).toString() + 's';
+	line1.style.animationDuration =  (duration_triangles[4] * timeFactor).toString() + 's';
+	line2.style.animationDuration =  (duration_triangles[3] * timeFactor).toString() + 's';
+	line3.style.animationDuration =  (duration_triangles[2] * timeFactor).toString() + 's';
+	line4.style.animationDuration =  (duration_triangles[1] * timeFactor).toString() + 's';
+	line5.style.animationDuration =  (duration_triangles[0] * timeFactor).toString() + 's';
 	bottom1.style.animationDuration =  (duration_triangles[4] * timeFactor).toString() + 's';
 	bottom2.style.animationDuration =  (duration_triangles[3] * timeFactor).toString() + 's';
 	bottom3.style.animationDuration =  (duration_triangles[2] * timeFactor).toString() + 's';
@@ -187,6 +182,24 @@ function anitop(){
 	document.getElementById("line3").className = "line3";
 	document.getElementById("line2").className = "line2";
 	document.getElementById("line1").className = "line1";
+}
+
+
+function calcNormHeights(heights_triangles){
+	//Copy initial array
+	//var heights_triangles = h_output_top.concat();
+	// cumsum
+	for (var i = 1; i < heights_triangles.length; i++) {
+		heights_triangles[i] = heights_triangles[i-1] + heights_triangles[i];
+	}
+	// Norm heights
+	for(let i = 0; i < heights_triangles.length; i++) {
+		heights_triangles[i] = heights_triangles[i] / heights_triangles[heights_triangles.length - 1];
+	}
+
+	// output heights
+	console.log(heights_triangles)
+	return heights_triangles;
 }
 
 

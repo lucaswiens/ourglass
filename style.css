@@ -151,11 +151,11 @@ h4 {
 	left: -200px;
 	top: -75px;
 	animation-fill-mode: forwards;
-	animation-timing-function:linear;
+	animation-timing-function: var(--animationType);
 }
 @keyframes bottom1 {
 	0% {transform: scale(0);}
-	100% { transform: scale(var(--top1-scale)); }
+	100% { transform: scale(var(--bottom1-scale)); }
 }
 
 .bottom2 {
@@ -170,12 +170,11 @@ h4 {
 	left: -200px;
 	top: -75px;
 	animation-fill-mode: forwards;
-	animation-timing-function: var(--animationType);;
+	animation-timing-function: var(--animationType);
 }
 @keyframes bottom2 {
-	0% {transform: scale(0); }
-	80% { transform: scale(var(--top2-scale)); }
-	100% { transform: scale(var(--top2-scale)); }
+	0% {transform: scale(0);}
+	100% { transform: scale(var(--bottom2-scale)); }
 }
 
 .bottom3 {
@@ -190,12 +189,11 @@ h4 {
 	left: -200px;
 	top: -75px;
 	animation-fill-mode: forwards;
-	animation-timing-function:linear;
+	animation-timing-function: var(--animationType);
 }
 @keyframes bottom3 {
-	 0% { transform: scale(0); }
-	60% { transform: scale(var(--top3-scale)); }
-	100% { transform: scale(var(--top3-scale)); }
+	0% {transform: scale(0);}
+	100% { transform: scale(var(--bottom3-scale)); }
 }
 
 .bottom4 {
@@ -210,12 +208,11 @@ h4 {
 	left: -200px;
 	top: -75px;
 	animation-fill-mode: forwards;
-	animation-timing-function:linear;
+	animation-timing-function: var(--animationType);
 }
 @keyframes bottom4 {
-	0% {transform: scale(0); }
-	40% { transform: scale(var(--top4-scale)); }
-	100% { transform: scale(var(--top4-scale)); }
+	0% {transform: scale(0);}
+	100% { transform: scale(var(--bottom4-scale)); }
 }
 
 .bottom5 {
@@ -230,12 +227,11 @@ h4 {
 	left: -200px;
 	top: -75px;
 	animation-fill-mode: forwards;
-	animation-timing-function:linear;
+	animation-timing-function: var(--animationType);
 }
 @keyframes bottom5 {
-	 0% {transform: scale(0);}
-	20% { transform: scale(var(--top5-scale)); }
-	100% { transform: scale(var(--top5-scale)); }
+	0% {transform: scale(0);}
+	100% { transform: scale(var(--bottom5-scale)); }
 }
 
 #loader {
