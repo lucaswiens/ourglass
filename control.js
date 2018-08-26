@@ -129,6 +129,47 @@ function calcOurglass(form) {
 
 }
 
+var paused = false; // TODO This is bad
+function clearOurglass(form){
+	if(paused){
+		paused = false;
+		//document.body.className="";
+		document.getElementById("top5").classList.remove("paused");
+		document.getElementById("top4").classList.remove("paused");
+		document.getElementById("top3").classList.remove("paused");
+		document.getElementById("top2").classList.remove("paused");
+		document.getElementById("top1").classList.remove("paused");
+		document.getElementById("bottom5").classList.remove("paused");
+		document.getElementById("bottom4").classList.remove("paused");
+		document.getElementById("bottom3").classList.remove("paused");
+		document.getElementById("bottom2").classList.remove("paused");
+		document.getElementById("bottom1").classList.remove("paused");
+		document.getElementById("line5").classList.remove("paused");
+		document.getElementById("line4").classList.remove("paused");
+		document.getElementById("line3").classList.remove("paused");
+		document.getElementById("line2").classList.remove("paused");
+		document.getElementById("line1").classList.remove("paused");
+	}
+	else{
+		paused = true;
+		document.getElementById("top5").classList.add("paused");
+		document.getElementById("top4").classList.add("paused");
+		document.getElementById("top3").classList.add("paused");
+		document.getElementById("top2").classList.add("paused");
+		document.getElementById("top1").classList.add("paused");
+		document.getElementById("bottom5").classList.add("paused");
+		document.getElementById("bottom4").classList.add("paused");
+		document.getElementById("bottom3").classList.add("paused");
+		document.getElementById("bottom2").classList.add("paused");
+		document.getElementById("bottom1").classList.add("paused");
+		document.getElementById("line5").classList.add("paused");
+		document.getElementById("line4").classList.add("paused");
+		document.getElementById("line3").classList.add("paused");
+		document.getElementById("line2").classList.add("paused");
+		document.getElementById("line1").classList.add("paused");
+	}
+}
+
 // starts the animation by assigning object class to html elements
 function anitop(){
 	document.getElementById("top5").className = "top5";
