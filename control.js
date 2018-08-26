@@ -1,4 +1,4 @@
-
+﻿
 // calculates the style of the hourglass
 function calcOurglass(form) {
 	const top1 = document.querySelector('div#top1');
@@ -18,7 +18,7 @@ function calcOurglass(form) {
 	const line5 = document.querySelector('div#line5');
 
 
-	timeFactor = 10;
+	timeFactor = 60;
 
 	console.log(top1)
 	console.log(top5)
