@@ -127,7 +127,13 @@ function calcOurglass(form) {
 var paused = false; // TODO This is bad
 function clearOurglass(form){
 	const pauseButton = document.getElementById("pbPause");
-	
+
+	const line1 = document.querySelector('div#line1');
+	const line2 = document.querySelector('div#line2');
+	const line3 = document.querySelector('div#line3');
+	const line4 = document.querySelector('div#line4');
+	const line5 = document.querySelector('div#line5');
+
 	console.log(pauseButton)
 	if(paused){
 		paused = false;
@@ -148,6 +154,12 @@ function clearOurglass(form){
 		document.getElementById("line3").classList.remove("paused");
 		document.getElementById("line2").classList.remove("paused");
 		document.getElementById("line1").classList.remove("paused");
+
+		line1.style.visibility = "visible";
+		line2.style.visibility = "visible";
+		line3.style.visibility = "visible";
+		line4.style.visibility = "visible";
+		line5.style.visibility = "visible";
 	}
 	else{
 		paused = true;
@@ -167,6 +179,12 @@ function clearOurglass(form){
 		document.getElementById("line3").classList.add("paused");
 		document.getElementById("line2").classList.add("paused");
 		document.getElementById("line1").classList.add("paused");
+
+		line1.style.visibility = "hidden";
+		line2.style.visibility = "hidden";
+		line3.style.visibility = "hidden";
+		line4.style.visibility = "hidden";
+		line5.style.visibility = "hidden";
 	}
 }
 
