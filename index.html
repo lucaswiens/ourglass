@@ -1,170 +1,151 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-	<title>Ourglass</title>
+	<meta charset="UTF-8">
+	<title>Ourglass Turbo</title>
 	<link href="ourglass.png" rel="icon" type="image/x-icon">
 	<link href="ourglass.png" rel="shortcut icon" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <script src="control.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="control.js"></script>
 </head>
 
 <body>
-<h3 align="center" style="width:500px;"> Befüllt jetzt eure Sanduhr! </h3>
+	<div id="top">
+		<header>OURGLASS</header>
+	</div>
 
-<div>
-<form>
+	<div class="content" id="contentDiv">
+		<div class="createform" id="formInfo">
+			<h3 align="center" style="width:500px;"> Befüllt jetzt eure Sanduhr! </h3>
 
-<table style="width:500px;">
-	<tr>
-		<th>
-  <p> Phase 1:</>
-  <select name="phasea">
-    <option value="0">Phase hinzufügen:</option>
-    <option value="1">Unterrichtsgespräch</option>
-    <option value="2">Einzelarbeit</option>
-    <option value="3">Partnerarbeit</option>
-    <option value="4">Gruppenarbeit</option>
-    <option value="5">Organisation</option>
-  </select>
+			<form>
+				<table style="width:500px;">
+					<tr>
+						<th>
+							<p> Phase 1:</>
+								<select name="phase1">
+									<option value="0">Phase hinzufügen:</option>
+									<option value="1">Unterrichtsgespräch</option>
+									<option value="2">Einzelarbeit</option>
+									<option value="3">Partnerarbeit</option>
+									<option value="4">Gruppenarbeit</option>
+									<option value="5">Organisation</option>
+								</select>
 
-		</th>
-		<th>
+						</th>
+						<th>
 
-<p>
-  <label>Dauer</label>
-  <input id="time1" type="number" value="0" placeholder="Minuten">
-</p>
-		</th>
-	</tr>
-	<tr>
-		<th>
-  <p> Phase 2:</>
-  <select name="phaseb">
-    <option value="0">Phase hinzufügen:</option>
-    <option value="1">Unterrichtsgespräch</option>
-    <option value="2">Einzelarbeit</option>
-    <option value="3">Partnerarbeit</option>
-    <option value="4">Gruppenarbeit</option>
-    <option value="5">Organisation</option>
-  </select>
+							<p>
+								<label>Dauer</label>
+								<input id="time1" type="number" min="0" value="0" placeholder="Minuten">
+							</p>
+						</th>
+					</tr>
+					
+					<tr>
+						<th>
+							<p> Phase 2:</>
+								<select name="phase2">
+									<option value="0">Phase hinzufügen:</option>
+									<option value="1">Unterrichtsgespräch</option>
+									<option value="2">Einzelarbeit</option>
+									<option value="3">Partnerarbeit</option>
+									<option value="4">Gruppenarbeit</option>
+									<option value="5">Organisation</option>
+								</select>
 
-		</th>
-		<th>
+						</th>
+						<th>
 
-<p>
-  <label>Dauer</label>
-  <input id="time2" type="number" value="0" placeholder="Minuten">
-</p>
-		</th>
+							<p>
+								<label>Dauer</label>
+								<input id="time2" type="number" min="0" value="0" placeholder="Minuten">
+							</p>
+						</th>
 
-	</tr>
+					</tr>
 
-<tr>
-		<th>
-  <p> Phase 3:</>
-  <select name="phasec">
-    <option value="0">Phase hinzufügen:</option>
-    <option value="1">Unterrichtsgespräch</option>
-    <option value="2">Einzelarbeit</option>
-    <option value="3">Partnerarbeit</option>
-    <option value="4">Gruppenarbeit</option>
-    <option value="5">Organisation</option>
-  </select>
+					<tr>
+						<th>
+							<p> Phase 3:</>
+								<select name="phase3">
+									<option value="0">Phase hinzufügen:</option>
+									<option value="1">Unterrichtsgespräch</option>
+									<option value="2">Einzelarbeit</option>
+									<option value="3">Partnerarbeit</option>
+									<option value="4">Gruppenarbeit</option>
+									<option value="5">Organisation</option>
+								</select>
 
-		</th>
-		<th>
+						</th>
+						<th>
 
-<p>
-  <label>Dauer</label>
-  <input id="time3" type="number" value="0" placeholder="Minuten">
-</p>
-		</th>
+							<p>
+								<label>Dauer</label>
+								<input id="time3" type="number" min="0" value="0" placeholder="Minuten">
+							</p>
+						</th>
 
-	</tr>
+					</tr>
 
-<tr>
-		<th>
-  <p> Phase 4:</>
-  <select name="phased">
-    <option value="0">Phase hinzufügen:</option>
-    <option value="1">Unterrichtsgespräch</option>
-    <option value="2">Einzelarbeit</option>
-    <option value="3">Partnerarbeit</option>
-    <option value="4">Gruppenarbeit</option>
-    <option value="5">Organisation</option>
-  </select>
+					<tr>
+						<th>
+							<p> Phase 4:</>
+								<select name="phase4">
+									<option value="0">Phase hinzufügen:</option>
+									<option value="1">Unterrichtsgespräch</option>
+									<option value="2">Einzelarbeit</option>
+									<option value="3">Partnerarbeit</option>
+									<option value="4">Gruppenarbeit</option>
+									<option value="5">Organisation</option>
+								</select>
 
-		</th>
-		<th>
+						</th>
+						<th>
 
-<p>
-  <label>Dauer</label>
-  <input id="time4" type="number" value="0" placeholder="Minuten">
-</p>
-		</th>
+							<p>
+								<label>Dauer</label>
+								<input id="time4" type="number" min="0" value="0" placeholder="Minuten">
+							</p>
+						</th>
 
-	</tr>
+					</tr>
+					
+					<tr>
+						<th>
+							<p> Phase 5:</>
+								<select name="phase5">
+									<option value="0">Phase hinzufügen:</option>
+									<option value="1">Unterrichtsgespräch</option>
+									<option value="2">Einzelarbeit</option>
+									<option value="3">Partnerarbeit</option>
+									<option value="4">Gruppenarbeit</option>
+									<option value="5">Organisation</option>
+								</select>
+						</th>
+						<th>
+							<p>
+								<label>Dauer</label>
+								<input id="time5" type="number" min="0" value="0" placeholder="Minuten">
+							</p>
+						</th>
+					</tr>
+				</table>
 
-<tr>
-		<th>
-  <p> Phase 5:</>
-  <select name="phasee">
-    <option value="0">Phase hinzufügen:</option>
-    <option value="1">Unterrichtsgespräch</option>
-    <option value="2">Einzelarbeit</option>
-    <option value="3">Partnerarbeit</option>
-    <option value="4">Gruppenarbeit</option>
-    <option value="5">Organisation</option>
-  </select>
+				<p align="center" style="width:500px;">
+					<INPUT id="pbFill" TYPE="button" NAME="Starter" value="Füllen" onClick="startOurglass(this.form);" ; />
+					<INPUT id="pbPause" TYPE="button" NAME="Stopper" value="Pause" onClick="pauseAnimation(this.form)" ; />
+				</p>
+			</form>
+		</div>
 
-		</th>
-		<th>
+		<div id="ourglassContainer">
+		</div>
+	</div>
+<!--	<h4>hourglass animation for (h)ourglass // prototype</h4> --> 
 
-<p>
-  <label>Dauer</label>
-  <input id="time5" type="number" value="0" placeholder="Minuten">
-</p>
-		</th>
-
-	</tr>
-
-</table>
-
-
-
-<p align="center" style="width:500px;" >
-<INPUT id="pbFill" TYPE="button" NAME="Starter" value="Füllen" onClick="calcOurglass(this.form); anitop()"; />
-<INPUT id="pbPause" TYPE="button" NAME="Stopper" value="Pause" onClick="clearOurglass(this.form)"; />
-</p>
-
-</form>
-</div>
-
-<div id="loader">
-
-  <div id="top1"></div>
-  <div id="bottom1"></div>
-  <div id="line1"></div>
-  <div id="top2"></div>
-  <div id="bottom2"></div>
-  <div id="line2"></div>
-  <div id="top3"></div>
-  <div id="bottom3"></div>
-  <div id="line3"></div>
-  <div id="top4"></div>
-  <div id="bottom4"></div>
-  <div id="line4"></div>
-  <div id="top5"></div>
-  <div id="bottom5"></div>
-  <div id="line5"></div>
-
-</div>
-
-
-
-<h4>hourglass animation for (h)ourglass // prototype</h4>
-
-<h5>© Spiony</h5>
+	<h5>© Glumt</h5>
 </body>
+
 </html>
