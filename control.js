@@ -3,9 +3,9 @@
 ///-------------------------------------------------------------------------///
 
 // --- Global time factor for debug purpose (default: 60 for seconds)
-const g_TIME_FACTOR = 1;
+const g_TIME_FACTOR = 60;
 
-const g_OURGLASSCONT_HEIGHT = 300;	
+const g_OURGLASSCONT_HEIGHT = 300;
 const g_OURGLASSCONT_WIDTH = 475;
 
 const g_PHASENAMES = ['Unterrichtsgespräch', 'Einzelarbeit', 'Partnerarbeit', 'Gruppenarbeit', 'Organisation', 'Ourglass ist abgelaufen.']	
