@@ -231,7 +231,7 @@ function addLines(phaseType, triangleHeights, triangleAnlge, cumDuration, distan
 		phase.style.animationDelay = ((aniDelay)* g_TIME_FACTOR).toString() + 's';	
 		phase.style.animationDuration = ((aniDuration)* g_TIME_FACTOR).toString() + 's';	
 		
-		phase.innerHTML = g_PHASENAMES[i];
+		phase.innerHTML = g_PHASENAMES[phaseType[i]-1];
 		contentDiv.appendChild(phase);
 		
 		
