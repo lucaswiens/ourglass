@@ -54,6 +54,10 @@ body {
   height:100%;
 }
 
+#contentFrame {
+   background-color: white;
+}
+
 
 .createform {
   width:  500px;

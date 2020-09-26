@@ -76,6 +76,7 @@ function startOurglass(form) {
 		document.getElementById("ourglassContainer").style.animationFillMode = 'forwards';
 
         toggleSpeedButtons();
+	    document.getElementById("contentFrame").value = 0
 	} else {
 		// Reset functionallity
 
@@ -271,13 +272,27 @@ function addLines(phaseType, triangleHeights, triangleAnlge, cumDuration, distan
 }
 
 
-function speedUp() {
-    timeStretch(1/2);
+function changeBDcolor(contentFrame) {
+    const inc = 25;
+    rgb = [255, 255 - inc*Math.abs(contentFrame.value), 255 - Math.abs(inc*contentFrame.value)]
+    if (contentFrame.value < 0) {
+        rgb = [rgb[1],rgb[2],rgb[0]];
+    }
+    contentFrame.style.backgroundColor = "rgb(" + rgb.join(",") +  ")";
 }
 
+function speedUp() {
+    timeStretch(1/2);
+	contentFrame = document.getElementById("contentFrame");
+    contentFrame.value = contentFrame.value + 1;
+    changeBDcolor(contentFrame);
+}
 
 function slowDown() {
     timeStretch(2);
+	contentFrame = document.getElementById("contentFrame");
+    contentFrame.value = contentFrame.value - 1;
+    changeBDcolor(contentFrame);
 }
 
 function timeStretch(timefactor) {
