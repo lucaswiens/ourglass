@@ -68,11 +68,17 @@ body {
   border-width:   5px;
 }
 
+#pbSpeed {
+	visibility: hidden;
+}
+#pbSlow {
+	visibility: hidden;
+}
 
 #ourglassContainer {
 	width: 475px;
 	height: 300px;
-	margin-top: -370px;
+	margin-top: -410px;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
@@ -82,7 +88,7 @@ body {
 	padding: 0px;
 	opacity: 0;
 	background-color: whitesmoke;
-	
+
 	z-index: -1;
 	animation-fill-mode: forwards;
 }
@@ -96,13 +102,13 @@ body {
 .phaseContainer {
 	width: 475px;
 	height: 50px;
-	margin-top: -425px;
+	margin-top: -465px;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	
+
 	font-size: 2em;
 	font-weight: bold;
 	text-align: center;
@@ -111,7 +117,7 @@ body {
 	opacity: 0;
 	background-color: whitesmoke;
 	animation: showPhase;
-	
+
 	z-index: -1;
 }
 @keyframes showPhase {
@@ -126,19 +132,19 @@ body {
 	height: 0;
 	top: 0px;
 	left: 0px;
-	
+
 	opacity: 0;
-	
+
 	border-left: 100px solid transparent;
 	border-right: 100px solid transparent;
 	border-bottom: 100px solid red;
 	transform-origin: 50% 100%;
-	
+
 	animation: scaleUp;
 	animation-timing-function: var(--animationTypeUp);
     animation-fill-mode: forwards;
-	
-} 
+
+}
 
 @keyframes scaleUp {
 	0% {transform: scale(0); opacity:1;}
@@ -175,7 +181,7 @@ body {
 	width: 0px;
 	left: 0px;
 	top: 0px;
-	
+
 	opacity:0;
 
 	animation: lineDown 20s linear;

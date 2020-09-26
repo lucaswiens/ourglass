@@ -8,6 +8,7 @@
 	<link href="ourglass.png" rel="shortcut icon" type="image/x-icon">
 	<link rel="stylesheet" href="style.css">
 	<script src="control.js"></script>
+    <script src="jquery-3.5.1.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 							</p>
 						</th>
 					</tr>
-					
+
 					<tr>
 						<th>
 							<p> Phase 2:</>
@@ -111,7 +112,7 @@
 						</th>
 
 					</tr>
-					
+
 					<tr>
 						<th>
 							<p> Phase 5:</>
@@ -138,12 +139,16 @@
 					<INPUT id="pbPause" TYPE="button" NAME="Stopper" value="Pause" onClick="pauseAnimation(this.form)" ; />
 				</p>
 			</form>
+				<p align="center" style="width:500px;">
+					<INPUT id="pbSpeed" TYPE="button" NAME="Speed" value="Schneller" onClick="speedUp()" ; />
+					<INPUT id="pbSlow" TYPE="button" NAME="Speed" value="Langsamer" onClick="slowDown()" ; />
+				</p>
 		</div>
 
 		<div id="ourglassContainer">
 		</div>
 	</div>
-<!--	<h4>hourglass animation for (h)ourglass // prototype</h4> --> 
+<!--	<h4>hourglass animation for (h)ourglass // prototype</h4> -->
 
 	<h5>© Glumt</h5>
 </body>
